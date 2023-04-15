@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FD Detailing</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#qr-section">Cod QR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#presentation">Despre Noi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Serviciile Noastre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#carousel-section">Portofoliu</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to FD Detailing</h1>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <center>
+            <div class="qr-container">
+                <button id="qr-button"><img src="./images/qr_button_icon.jpeg" alt="QR code"></button>
+                <div id="qr-dropdown">
+                    <img src="./images/main_qr_code.png" alt="QR code">
+                </div>
+            </div>
+            </center>
+
+            <section class="description text-center py-5">
+                <div class="container">
+                    <h2 class="text-uppercase mb-4" style="color: var(--primary-color);">Experimentați Diferența</h2>
+                    <p class="lead" style="font-size: 1.5rem;">FD Detailing oferă servicii de detaliere auto de cea mai înaltă calitate, folosind doar cele mai bune produse și tehnici pentru a asigura că mașina dumneavoastră este tratată cu grija pe care o merită. Echipa noastră pasionată de profesioniști se mândrește cu faptul că depășește așteptările dumneavoastră în fiecare dintre job-urile pe care le facem. Contactați-ne astăzi pentru a programa o programare și pentru a vedea diferența pe care FD Detailing o poate face pentru vehiculul dumneavoastră.</p>
+                </div>
+            </section>            
+
+            <section class="services">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Servicii de Detaliere</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Curățare jante
+                                <span class="badge badge-primary badge-pill">50 RON</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Curățare tapițerie
+                                <span class="badge badge-primary badge-pill">75 RON</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Curățare geamuri
+                                <span class="badge badge-primary badge-pill">40 RON</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>            
+
+            <section class="carousel-section">
+                <h2>Lucrările noastre</h2>
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./images/our_work_1.jpeg" class="d-block w-100" alt="Imaginea 1" style="max-height:60vh">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/our_work_2.jpeg" class="d-block w-100" alt="Imaginea 2" style="max-height:60vh">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/our_work_3.jpeg" class="d-block w-100" alt="Imaginea 3" style="max-height:60vh">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Următorul</span>
+                    </a>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+    <footer class="bg-light py-4">
+        <div class="container">
+            <p class="text-center mb-0">© 2023 FD Detailing. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
