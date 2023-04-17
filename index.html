@@ -15,53 +15,50 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shine.css/dist/shine.min.css">
     </head>
 <body>
-    
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-          <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="#presentation">Despre Noi</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#services">Serviciile Noastre</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#carousel-section">Portofoliu</a>
-                </li>
-              </ul>
-            </div>
-            <div class="phone-number-container">
-              <span class="phone-number animate__animated animate__pulse animate__infinite">
-                <i class="fas fa-phone-alt"></i>
-                000-000-000
-              </span>
-            </div>
-          </div>
-        </nav>
-      </header>
-      
-    <div class="logo-container text-center">
-        <h2> . </h2>
-    </div>
-    
-
-    <main>
-        <div class="container">
-
-            <div class="logo-container text-center glass-container">
-                <h1 class="company-logo-placeholder">Francis Detailing</h1>
-                <div class="shine glass-container">
-                    <p class="intro-description">
-                        Bine ați venit la Francis Detailing, unde oferim servicii de detaliere auto de înaltă calitate. Suntem dedicați să scoatem în evidență cele mai bune aspecte ale vehiculului dumneavoastră și să ne asigurăm că acesta arată întotdeauna impecabil.
-                    </p>
+            <div class="container d-flex justify-content-between align-items-center">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#presentation">Despre Noi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Serviciile Noastre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#carousel-section">Portofoliu</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="phone-number-container">
+                    <span class="phone-number animate__animated animate__pulse animate__infinite">
+                        <i class="fas fa-phone-alt"></i>
+                        000-000-000
+                    </span>
                 </div>
             </div>
-            
+        </nav>
+    </header>
+    
+    <div class="logo-container text-center shine" id="presentation">
+        <i class="fas fa-car-side company-logo animate__animated animate__fadeIn"></i>
+        <h2 class="company-name animate__animated animate__fadeIn">Francis Detailing</h2>
+    </div>    
+
+    <main>
+        <section  class="presentation-section">
+            <div class="container" id="services">
+                <div class="logo-container text-center glass-container">
+                    <div class="shine glass-container">
+                        <p class="intro-description">
+                            Bine ați venit la Francis Detailing, unde oferim servicii de detaliere auto de înaltă calitate. Suntem dedicați să scoatem în evidență cele mai bune aspecte ale vehiculului dumneavoastră și să ne asigurăm că acesta arată întotdeauna impecabil.
+                        </p>
+                    </div>
+                </div>
 
             <center>
                 <div class="qr-container">
@@ -73,13 +70,14 @@
                     </div>
                 </div>
             </center>
+        </section>
 
             <section class="services">
                 <div class="container">
                   <div class="row">
                     <div class="col-md-12">
                       <div class="card">
-                          <h2 class="section-title">Servicii de Detaliere</h2>
+                          <h2 class="section-title shine glass-container">Servicii de Detaliere</h2>
                         <div class="card-body">
                           <div class="row">
                             <div class="col-md-6">
@@ -126,9 +124,9 @@
                 </div>
               </section>
                                         
-              <section class="carousel-section card">
+              <section class="carousel-section" id="carousel-section">
                 <div class="container card">
-                    <h2 class="section-title shine">Lucrarile noastre</h2>
+                    <h2 class="section-title shine glass-container">Lucrarile noastre</h2>
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
@@ -168,10 +166,9 @@
         </div>
     </footer>
     
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </html>

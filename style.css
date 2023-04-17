@@ -1,9 +1,11 @@
 :root {
-    --primary-color: rgb(255, 149, 0);
-    --primary-color2: rgb(251, 131, 12);
-    --text-color-dark: #333;
-    --text-color-light: rgb(0, 0, 0);
+    --primary-color: rgb(251, 107, 107);
+    --primary-color2: rgb(250, 50, 36);
+    --text-color-dark: #000000;
+    --text-color-light: rgb(228, 225, 235);
     --bg-color: #9e9b9b;
+    --primary-background1: rgb(255, 235, 235);
+    --primary-background2: rgba(225, 221, 221, 0);
     --box-shadow-color: rgba(0, 0, 0, 0.3);
     margin: 0;
     padding: 0;
@@ -42,13 +44,27 @@ a {
 }
 
 /* Logo Container */
-.logo-container {
-    background-image: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color2) 100%);
-    padding: 20px 0;
-    position: relative;
-    overflow: hidden;
+
+.company-logo {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--font-color-light) !important;
 }
 
+.company-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--font-color-light) !important;
+}
+
+.logo-container {
+    margin-top: 2rem;
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+}
 
 .company-logo-placeholder {
     font-family: "Arial", sans-serif;
@@ -57,7 +73,7 @@ a {
     color: var(--text-color-light);
     margin: 0;
     padding: 20px 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 4px var(--box-shadow-color);
 }
 
 /* Hero Section */
@@ -94,7 +110,7 @@ section h2 {
 }
 
 .services h2 {
-    color: var(--text-color-light);
+    color: var(--text-color-dark);
 }
 
 .services ul {
@@ -105,7 +121,7 @@ section h2 {
 
 .services li {
     flex: 0 0 calc(33.333% - 20px);
-    background-color: white;
+    background-color: var(--primary-background1);
     padding: 20px;
     box-shadow: 0 2px 4px var(--box-shadow-color);
     margin-bottom: 20px;
@@ -114,7 +130,7 @@ section h2 {
 
 /* Card Styling */
 .card {
-    background-color: #fff;
+    background-color: var(--primary-background2);
     border-radius: 10px;
     box-shadow: 0 0 10px var(--box-shadow-color);
 }
@@ -133,12 +149,12 @@ section h2 {
 
 .list-group-item {
     border: none;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .list-group-item {
     border: none;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .list-group-item:last-child {
@@ -153,7 +169,6 @@ section h2 {
 .qr-section {
     text-align: center;
     margin: 20px 0;
-    background-color: red;
     padding: 100px;
 }
 
@@ -173,13 +188,14 @@ section h2 {
     width: 100px; 
     height: 100px;
     font-size: 2rem;
-    color: white;
+    color: var(--text-color-light);
     cursor: pointer;
     transition: transform 0.3s;
     display: flex; 
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    box-shadow: 0 4px 8px var(--box-shadow-color);
 }
 
 #qrButton img {
@@ -218,12 +234,68 @@ section h2 {
 }
 
 .phone-number-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.navbar-nav .nav-item {
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px var(--box-shadow-color);
+
+}
+
+.nav-link {
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: var(--primary-color);
+    z-index: -1;
+    transition: height 0.3s;
+}
+
+.nav-link:hover::before {
+    height: 100%;
+}
+
+.nav-link:hover {
+    color: var(--text-color-light) !important;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--text-color-dark);
+}
+
+.phone-number {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-toggler {
+        margin-right: 0;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+}
+
 
 .phone-number {
     font-weight: bold;
@@ -231,15 +303,23 @@ section h2 {
     font-size: 2.2rem;
     border-radius: 50%;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    display: inline-block;
+    background-color: transparent;
+    white-space: nowrap;
 }
+
+@media screen and (max-width: 767px) {
+    .phone-number {
+        font-size: 1.6rem;
+    }
+}
+
 
 .qr-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 1%;
+    margin-top: 5%;
 }
 
 #qr-button {
@@ -248,14 +328,17 @@ section h2 {
     border-radius: 50%;
     padding: 15px;
     font-size: 2rem;
-    color: white;
+    color: var(--text-color-light);
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s; /* Add background-color transition */
 }
 
 #qr-button:hover {
     transform: scale(1.1);
+    background-color: var(--primary-color);
+    border: 15px solid var(--primary-color2);
 }
+
 
 #qr-dropdown {
     display: none;
@@ -275,10 +358,9 @@ body {
 
 .logo-container {
     background-image: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color2) 100%);
-    padding: 20px 0;
+    padding: 100px 0 0 0;
     position: relative;
     overflow: hidden;
-    margin-bottom: 40px;
 }
 
 @keyframes shadow-animation {
@@ -304,7 +386,7 @@ body {
 
 .intro-description {
     font-size: 1.2rem;
-    color: var(--text-color-light);
+    color: var(--text-color-dark);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
@@ -492,7 +574,7 @@ body {
   
   .section-title {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--font-color-light) !important;
     font-weight: bold;
     font-size: 2rem;
     padding: 20px;
