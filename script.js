@@ -1,13 +1,24 @@
-$(document).ready(function() {
-    $("#qr-button").click(function() {
-        $("#qr-dropdown").toggle();
+$(document).ready(function () {
+    var qrCodeContainer = document.getElementById("qr-code-container");
+    var qrCode = new QRCode(qrCodeContainer, {
+        text: window.location.href,
+        width: 128,
+        height: 128,
     });
-    
-    $(document).click(function(event) {
+
+    $("#qr-button").on("click", function () {
+        $(this).toggleClass("animate__pulse");
+        $("#qr-dropdown").fadeToggle();
+    });
+
+    $(document).on("click", function (event) {
         var $target = $(event.target);
-        if(!$target.closest('#qr-dropdown').length && 
-           !$target.closest('#qr-button').length) {
-            $('#qr-dropdown').hide();
-        }        
+        if (
+            !$target.closest("#qr-dropdown").length &&
+            !$target.closest("#qr-button").length
+        ) {
+            $("#qr-dropdown").hide();
+            $("#qr-button").removeClass("animate__pulse");
+        }
     });
 });
