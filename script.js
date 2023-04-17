@@ -22,3 +22,9 @@ $(document).ready(function () {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.header-headroom');
+    const headroom  = new Headroom(header);
+    headroom.init();
+});
