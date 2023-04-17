@@ -1,10 +1,10 @@
 :root {
-    --primary-color: rgb(251, 107, 107);
-    --primary-color2: rgb(250, 50, 36);
+    --primary-color: rgb(233, 164, 3);
+    --primary-color2: rgb(250, 122, 36);
     --text-color-dark: #000000;
     --text-color-light: rgb(228, 225, 235);
     --bg-color: #9e9b9b;
-    --primary-background1: rgb(255, 235, 235);
+    --primary-background1: rgba(255, 206, 61, 0.058);
     --primary-background2: rgba(225, 221, 221, 0);
     --box-shadow-color: rgba(0, 0, 0, 0.3);
     margin: 0;
@@ -58,6 +58,7 @@ a {
     font-weight: bold;
     text-align: center;
     margin-top: 1rem;
+    padding-bottom: 20px;
     color: var(--font-color-light) !important;
 }
 
